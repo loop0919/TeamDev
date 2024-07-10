@@ -1,0 +1,5 @@
+「th」「tr」「td」 の違い
+
+th「Table Header」表の見出し（1番上の行）
+tr「Table Row」表の行
+td「Table Data」表のデータ（セル）
