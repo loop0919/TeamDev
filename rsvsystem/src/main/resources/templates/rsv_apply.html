@@ -1,0 +1,135 @@
+<html>
+<head>
+	<title>予約内容入力</title>
+	<link rel="stylesheet" href="rsv_apply.css">
+</head>
+
+<body>
+
+<!-- メニューバー -->
+<header>
+    <div id="header_contents">
+        <div id="title_contents">
+            <p id="title_1"><b>○○○○塾</b></p>
+            <p id="title_2"><b>教室予約システム</b></p>
+        </div>
+        <ul>
+            <li><b><a href='home.html'>ホーム</a></b></li>
+            <li class="current"><b><a href='rsv_apply.html'>新規予約</a></b></li>
+            <li><b><a href='rsv_state.html'>現在の予約状況</a></b></li>
+            <li><b><a href="logout_confirm.html">ログアウト</a></b></li>
+        </ul>
+    </div>
+</header>
+
+<!-- フォーム -->
+<div id="content">
+	<div class="form_content">
+		<h2>新規予約内容入力</h2>
+		<form id="form">
+			<table>
+				<tr>
+					<th>項目</th><th>入力欄</th>
+				</tr>
+				<tr>
+					<td class="item">教員名</td>
+					<td><select id="name" name="name" required>
+						<option value="">選択してください</option>
+						<option value="a">平野 柴耀</option>
+						<option value="b">永瀬 廉</option>
+						<option value="c">神宮寺 勇太</option>
+						<option value="d">髙橋 海人</option>
+						<option value="e">岸 優太</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td class="item">使用日</td>
+					<td>
+						<input id="date" type="date" name="date" required>
+					</td>
+				</tr>
+				<tr>
+					<td class="item">使用時間</td>
+					<td>
+						<select id="time" name="time">
+							<option value="">選択してください</option>
+							<option value="1">1コマ目 09:00 - 10:10</option>
+							<option value="2">2コマ目 10:25 - 11:35</option>
+							<option value="3">3コマ目 12:35 - 13:45</option>
+							<option value="4">4コマ目 14:00 - 15:10</option>
+							<option value="5">5コマ目 15:25 - 16:35</option>
+							<option value="6">6コマ目 17:00 - 18:10</option>
+							<option value="7">7コマ目 18:25 - 19:35</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td class="item">教室</td>
+					<td>
+						<select id="classroom" name="classroom_name">
+							<option value="">選択してください</option>
+							<option value="101">101教室</option>
+							<option value="102">102教室</option>
+							<option value="103">103教室</option>
+							<option value="104">104教室</option>
+							<option value="201">201教室</option>
+							<option value="202">202教室</option>
+							<option value="301">301教室</option>
+							<option value="302">302教室</option>
+							<option value="303">303教室</option>		
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td class="item">科目</td>
+					<td>
+						<select id="subject" name="subject">
+							<option value="">選択してください</option>
+							<option value="japanese">国語</option>
+							<option value="mathematics">算数</option>
+							<option value="science">理科</option>
+							<option value="society">社会</option>
+							<option value="english">英語</option>		
+						</select>	
+					</td>			
+				</tr>
+				<tr>
+					<td class="item">使用人数</td>
+					<td>
+						<input id="people" type="text" name="people" size="5" value="" required/>
+						<span id="v_101" class="hidden">／10人</span>
+						<span id="v_102" class="hidden">／30人</span>
+						<span id="v_103" class="hidden">／20人</span>
+						<span id="v_104" class="hidden">／20人</span>
+						<span id="v_201" class="hidden">／50人</span>
+						<span id="v_202" class="hidden">／20人</span>
+						<span id="v_301" class="hidden">／10人</span>
+						<span id="v_302" class="hidden">／30人</span>
+						<span id="v_303" class="hidden">／30人</span>
+						<script src="js/NoP.js"></script>
+					</td>
+				</tr>
+				
+				<tr>
+					<td class="item">備考</td>
+					<td><textarea id="comment" name="comment" cols="40" rows="3"></textarea></td>
+				</tr>
+				<tr>
+					<td class="item">予約登録日</td>
+					<td>
+						<span class="today"><script src="js/date_now.js"></script></span>
+					</td>
+				</tr>
+			</table>
+
+			<input class="button_confirm" type="submit" value="確認画面へ"/>
+			
+			<!-- 値渡し--><!-- ページ遷移はできてる！-->
+			<script src="js/apply_data_set.js"></script>
+		</form>
+	</div>
+
+</div><!-- /#form_content-->
+
+</body>
+</html>
