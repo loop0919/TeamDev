@@ -1,7 +1,7 @@
 <html>
 <head>
-	<title>現在の予約状況</title>
-	<link rel="stylesheet" href="../static/css/rsv_state.css">
+	<title>予約状況</title>
+	<link rel="stylesheet" href="rsv_state.css">
 </head>
 
 <body>
@@ -15,8 +15,8 @@
         </div>
         <ul>
             <li><b><a href='home.html'>ホーム</a></b></li>
-            <li><b><a href='rsv_apply.html'>新規予約</a></b></li>
-            <li class="current"><b><a href='rsv_state.html'>現在の予約状況</a></b></li>
+            <li><b><a href='rsv_apply.html'>予約申請</a></b></li>
+            <li class="current"><b><a href='rsv_state.html'>予約状況</a></b></li>
             <li><b><a href="logout_confirm.html">ログアウト</a></b></li>
         </ul>
     </div>
@@ -28,10 +28,12 @@
 		<div id="timetable_box">
 			<table>
 				<tr>
-					<td>日付：</td><td><input id="date_rsv_state" type="date" name="date"></td>
+					<td>日付：</td>
+					<td>
+						<input type="date" name="date" required>
+					</td>
 				</tr>
 			</table>
-			<p id="date_text"><b>日付を指定してください</b></p>
 			<table id="timetable">
 				<thead>
 					<tr>
@@ -48,90 +50,13 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<td>1コマ目<br>09:00 - 10:10</td>
-						<td class="state1_101">&nbsp;</td>
-						<td class="state1_102">&nbsp;</td>
-						<td class="state1_103">&nbsp;</td>
-						<td class="state1_104">&nbsp;</td>
-						<td class="state1_201">&nbsp;</td>
-						<td class="state1_202">&nbsp;</td>
-						<td class="state1_301">&nbsp;</td>
-						<td class="state1_302">&nbsp;</td>
-						<td class="state1_303">&nbsp;</td>
-					</tr>
-					<tr>
-						<td>2コマ目<br>10:25 - 11:35</td>
-						<td class="state2_101">&nbsp;</td>
-						<td class="state2_102">&nbsp;</td>
-						<td class="state2_103">&nbsp;</td>
-						<td class="state2_104">&nbsp;</td>
-						<td class="state2_201">&nbsp;</td>
-						<td class="state2_202">&nbsp;</td>
-						<td class="state1_301">&nbsp;</td>
-						<td class="state2_302">&nbsp;</td>
-						<td class="state2_303">&nbsp;</td>
-					</tr>
-					<tr>
-						<td>3コマ目<br>12:35 - 13:45</td>
-						<td class="state3_101">&nbsp;</td>
-						<td class="state3_102">&nbsp;</td>
-						<td class="state3_103">&nbsp;</td>
-						<td class="state3_104">&nbsp;</td>
-						<td class="state3_201">&nbsp;</td>
-						<td class="state3_202">&nbsp;</td>
-						<td class="state1_301">&nbsp;</td>
-						<td class="state3_302">&nbsp;</td>
-						<td class="state3_303">&nbsp;</td>
-					</tr>
-					<tr>
-						<td>4コマ目<br>14:00 - 15:10</td>
-						<td class="state4_101">&nbsp;</td>
-						<td class="state4_102">&nbsp;</td>
-						<td class="state4_103">&nbsp;</td>
-						<td class="state4_104">&nbsp;</td>
-						<td class="state4_201">&nbsp;</td>
-						<td class="state4_202">&nbsp;</td>
-						<td class="state1_301">&nbsp;</td>
-						<td class="state4_302">&nbsp;</td>
-						<td class="state4_303">&nbsp;</td>
-					</tr>
-					<tr>
-						<td>5コマ目<br>15:25 - 16:35</td>
-						<td class="state5_101">&nbsp;</td>
-						<td class="state5_102">&nbsp;</td>
-						<td class="state5_103">&nbsp;</td>
-						<td class="state5_104">&nbsp;</td>
-						<td class="state5_201">&nbsp;</td>
-						<td class="state5_202">&nbsp;</td>
-						<td class="state1_301">&nbsp;</td>
-						<td class="state5_302">&nbsp;</td>
-						<td class="state5_303">&nbsp;</td>
-					</tr>
-					<tr>
-						<td>6コマ目<br>17:00 - 18:10</td>
-						<td class="state6_101">&nbsp;</td>
-						<td class="state6_102">&nbsp;</td>
-						<td class="state6_103">&nbsp;</td>
-						<td class="state6_104">&nbsp;</td>
-						<td class="state6_201">&nbsp;</td>
-						<td class="state6_202">&nbsp;</td>
-						<td class="state1_301">&nbsp;</td>
-						<td class="state6_302">&nbsp;</td>
-						<td class="state6_303">&nbsp;</td>
-					</tr>
-					<tr>
-						<td>7コマ目<br>18:25 - 19:35</td>
-						<td class="state7_101">&nbsp;</td>
-						<td class="state7_102">&nbsp;</td>
-						<td class="state7_103">&nbsp;</td>
-						<td class="state7_104">&nbsp;</td>
-						<td class="state7_201">&nbsp;</td>
-						<td class="state7_202">&nbsp;</td>
-						<td class="state1_301">&nbsp;</td>
-						<td class="state7_302">&nbsp;</td>
-						<td class="state7_303">&nbsp;</td>
-					</tr>
+					<tr><td>1コマ目<br>09:00 - 10:10</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+					<tr><td>2コマ目<br>10:25 - 11:35</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+					<tr><td>3コマ目<br>12:35 - 13:45</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+					<tr><td>4コマ目<br>14:00 - 15:10</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+					<tr><td>5コマ目<br>15:25 - 16:35</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+					<tr><td>6コマ目<br>17:00 - 18:10</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+					<tr><td>7コマ目<br>18:25 - 19:35</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
 				</tbody>
 			</table>
 		</div><!-- /#timetable_box -->
