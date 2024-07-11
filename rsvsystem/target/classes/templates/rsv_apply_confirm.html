@@ -1,0 +1,82 @@
+<html>
+<head>
+	<title>予約内容確認</title>
+	<link rel="stylesheet" href="../static/css/rsv_apply.css">
+</head>
+
+<body>
+
+<!-- メニューバー -->
+<header>
+    <div id="header_contents">
+        <div id="title_contents">
+            <p id="title_1"><b>○○○○塾</b></p>
+            <p id="title_2"><b>教室予約システム</b></p>
+        </div>
+        <ul>
+            <li><b><a href='home.html'>ホーム</a></b></li>
+            <li class="current"><b><a href='rsv_apply.html'>新規予約</a></b></li>
+            <li><b><a href='rsv_state.html'>現在の予約状況</a></b></li>
+            <li><b><a href="logout_confirm.html">ログアウト</a></b></li>
+        </ul>
+    </div>
+</header>
+
+<!-- フォーム確認 -->
+<div id="content">
+	<div class="form_content">
+		<h2>入力内容確認</h2>
+		<form>
+			<table>
+				<tr>
+					<th>項目</th><th>入力された内容</th>
+				</tr>
+				<tr>
+					<td class="item">教員名</td>
+					<td id="name_confirm"></td>
+				</tr>
+				<tr>
+					<td class="item">使用日</td>
+                    <td id="date_confirm"></td>
+				</tr>
+				<tr>
+					<td class="item">使用時間</td>
+					<td id="time_confirm"></td>
+				</tr>
+				<tr>
+					<td class="item">教室</td>
+					<td id="classroom_confirm"></td>
+				</tr>
+				<tr>
+					<td class="item">科目</td>
+					<td id="subject_confirm"></td>
+				</tr>
+				<tr>
+					<td class="item">使用人数</td>
+                    <td id="people_confirm"></td>
+					
+				</tr>
+				<tr>
+					<td class="item">備考</td>
+					<td id="comment_confirm"></td>
+				</tr>
+				<script src="../static/js/apply_data_get.js"></script>
+				<tr>
+					<td class="item">申請日</td>
+					<td>
+						<span class="today"><script src="../static/js/date_now.js"></script></span>
+					</td>
+				</tr>
+			</table>
+			<p>以上の内容で登録してもよろしいですか？</p>
+			<input class="button" type="button" value="変更する"
+				onclick="history.back()"/>
+			<input class="button" type="button" value="予約する"
+				onclick="location.href='rsv_apply_complete.html'"/>
+		</form>
+	</div>
+
+</div><!-- /#form_content-->
+</body>
+</html>
+
