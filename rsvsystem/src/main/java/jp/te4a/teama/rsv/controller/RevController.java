@@ -13,5 +13,15 @@ public class RevController {
     public String home(Model model) {
         return "home";
     }
+
+    @GetMapping(path="rsv_apply")
+    public String rsvApply(Model model) {
+        return "rsv_apply";
+    }
+
+    @GetMapping(path="rsv_state")
+    public String rsvState(Model model) {
+        return "rsv_state";
+    }
 }
 

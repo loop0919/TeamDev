@@ -72,7 +72,8 @@
 			<input class="button" type="button" value="変更する"
 				onclick="history.back()"/>
 			<input class="button" type="button" value="予約する"
-				onclick="location.href='rsv_apply_complete.html'"/>
+				onclick="location.href='rsv_apply_complete.html'"
+				th:onclick="|location.href='__@{rsv_apply_complete}__'|"/>
 		</form>
 	</div>
 

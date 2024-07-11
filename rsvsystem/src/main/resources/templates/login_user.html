@@ -1,7 +1,8 @@
 <html>
-<head>
+<html lang="ja" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <meta charset="UTF-8">
     <title>ログイン画面</title>
-    <link rel="stylesheet" href="../static/css/login.css">
+    <link rel="stylesheet" href="../static/css/login.css" th:href="@{/css/login.css}">
 </head>
 
 <body>
@@ -19,7 +20,7 @@
     <h1>ログイン</h1>
     <h5>予約申請者用</h5>
     <a href="">管理者用はこちら</a>
-    <form action="home.html">
+    <form action="home.html" th:action="login" method="post">
         <div class="login_user">
             <label>ID</label>
             <br/>

@@ -1,7 +1,8 @@
 <html>
-<head>
+<html lang="ja" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+	<meta charset="UTF-8">
 	<title>現在の予約状況</title>
-	<link rel="stylesheet" href="../static/css/rsv_state.css">
+	<link rel="stylesheet" href="../static/css/rsv_state.css" th:href="@{/css/rsv_state.css}">
 </head>
 
 <body>
@@ -14,10 +15,10 @@
             <p id="title_2"><b>教室予約システム</a></b></p>
         </div>
         <ul>
-            <li><b><a href='home.html'>ホーム</a></b></li>
-            <li><b><a href='rsv_apply.html'>新規予約</a></b></li>
-            <li class="current"><b><a href='rsv_state.html'>現在の予約状況</a></b></li>
-            <li><b><a href="logout_confirm.html">ログアウト</a></b></li>
+            <li><b><a href='home.html' th:href='@{home}'>ホーム</a></b></li>
+            <li><b><a href='rsv_apply.html' th:href='@{rsv_apply}'>新規予約</a></b></li>
+            <li class="current"><b><a href='rsv_state.html' th:href='@{rsv_state}'>現在の予約状況</a></b></li>
+            <li><b><a href="logout_confirm.html" th:href="@{logout}">ログアウト</a></b></li>
         </ul>
     </div>
 </header>
