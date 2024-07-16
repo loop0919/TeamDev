@@ -1,5 +1,8 @@
 package jp.te4a.teama.rsv.bean;
 
+
+import java.sql.Timestamp;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -9,33 +12,34 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
+@Data
 @Table(name="reservations")
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
 public class RsvBean {
     @Id
     @Column(name="id")
-    private String id;
+    private int id;
     
-    @Column(name="name")
-    private String name;
+    @Column(name="timestamp")
+    private Timestamp timestamp;
 
-    @Column(name="date")
-    private String date;
+    @Column(name="room_id")
+    private String roomId;
 
-    @Column(name="time")
-    private String time;
+    @Column(name="period_id")
+    private String periodId;
 
-    @Column(name="room")
-    private String room;
+    @Column(name="teacher_id")
+    private String teacherId;
 
-    @Column(name="subject")
-    private String subject;
+    @Column(name="subject_id")
+    private String subjectId;
 
-    @Column(name="people")
-    private int people;
+    @Column(name="remark")
+    private String remark;
 
-    @Column(name="comment")
-    private String comment;
+    @Column(name="status")
+    private boolean status;
+    
 }

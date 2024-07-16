@@ -27,40 +27,34 @@
 <div id="content">
 	<div class="form_content">
 		<h2>新規予約内容入力</h2>
-		<form id="form">
+		<form id="form" th:action="@{/rsv_apply}" method="post">
 			<table>
 				<tr>
 					<th>項目</th><th>入力欄</th>
 				</tr>
 				<tr>
 					<td class="item">教員名</td>
-					<td><select id="name" name="name" required>
-						<option value="">選択してください</option>
-						<option value="a">平野 柴耀</option>
-						<option value="b">永瀬 廉</option>
-						<option value="c">神宮寺 勇太</option>
-						<option value="d">髙橋 海人</option>
-						<option value="e">岸 優太</option>
-					</select></td>
+					<td>
+						<select id="name" name="name" required>
+							<option th:each="teacher : ${teachers}" th:value="${teacher.id}" th:text="${teacher.name}" th: th:selected="${teacher.id == rsvForm.name}">
+								平野 柴耀
+							</option>
+						</select>
+					</td>
 				</tr>
 				<tr>
 					<td class="item">使用日</td>
 					<td>
-						<input id="date" type="date" name="date" required>
+						<input id="date" type="date" name="date" th:value="${rsvForm.date}" required>
 					</td>
 				</tr>
 				<tr>
 					<td class="item">使用時間</td>
 					<td>
 						<select id="time" name="time">
-							<option value="">選択してください</option>
-							<option value="1">1コマ目 09:00 - 10:10</option>
-							<option value="2">2コマ目 10:25 - 11:35</option>
-							<option value="3">3コマ目 12:35 - 13:45</option>
-							<option value="4">4コマ目 14:00 - 15:10</option>
-							<option value="5">5コマ目 15:25 - 16:35</option>
-							<option value="6">6コマ目 17:00 - 18:10</option>
-							<option value="7">7コマ目 18:25 - 19:35</option>
+							<option th:each="schedule : ${schedules}" th:value="${schedule.id}" th:text="${schedule.name}" th:selected="${schedule.id == rsvForm.time}">
+								1コマ目 09:00 - 10:10
+							</option>
 						</select>
 					</td>
 				</tr>
@@ -68,16 +62,9 @@
 					<td class="item">教室</td>
 					<td>
 						<select id="classroom" name="classroom_name">
-							<option value="">選択してください</option>
-							<option value="101">101教室</option>
-							<option value="102">102教室</option>
-							<option value="103">103教室</option>
-							<option value="104">104教室</option>
-							<option value="201">201教室</option>
-							<option value="202">202教室</option>
-							<option value="301">301教室</option>
-							<option value="302">302教室</option>
-							<option value="303">303教室</option>		
+							<option th:each="classroom : ${classrooms}" th:value="${classroom.id}" th:text="${classroom.name}" th:selected="${classroom.id == rsvForm.classroom}">
+								101教室
+							</option>	
 						</select>
 					</td>
 				</tr>
@@ -85,19 +72,17 @@
 					<td class="item">科目</td>
 					<td>
 						<select id="subject" name="subject">
-							<option value="">選択してください</option>
-							<option value="japanese">国語</option>
-							<option value="mathematics">算数</option>
-							<option value="science">理科</option>
-							<option value="society">社会</option>
-							<option value="english">英語</option>		
+							<option th:each="subject : ${subjects}" th:value="${subject.id}" th:text="${subject.name}" th:selected="${subject.id == rsvForm.subject}">
+								算数
+							</option>	
 						</select>	
 					</td>			
 				</tr>
 				<tr>
 					<td class="item">使用人数</td>
 					<td>
-						<input id="people" type="text" name="people" size="5" value="" required/>
+						<input id="people" type="text" name="people" size="5" th:value="${rsvForm.people}" required/>
+						<!-- <span th:text="${}'人'"></span>
 						<span id="v_101" class="hidden">／10人</span>
 						<span id="v_102" class="hidden">／30人</span>
 						<span id="v_103" class="hidden">／20人</span>
@@ -107,13 +92,13 @@
 						<span id="v_301" class="hidden">／10人</span>
 						<span id="v_302" class="hidden">／30人</span>
 						<span id="v_303" class="hidden">／30人</span>
-						<script src="../static/js/NoP.js"></script>
+						<script src="../static/js/NoP.js"></script> -->
 					</td>
 				</tr>
 				
 				<tr>
 					<td class="item">備考</td>
-					<td><textarea id="comment" name="comment" cols="40" rows="3"></textarea></td>
+					<td><textarea id="comment" name="comment" th:text="#{rsvForm.comment}" cols="40" rows="3"></textarea></td>
 				</tr>
 				<tr>
 					<td class="item">予約登録日</td>
@@ -126,7 +111,7 @@
 			<input class="button_confirm" type="submit" value="確認画面へ"/>
 			
 			<!-- 値渡し--><!-- ページ遷移はできてる！-->
-			<script src="../static/js/apply_data_set.js" th:src="@{/js/apply_data_set.js}"></script>
+			<!-- <script src="../static/js/apply_data_set.js" th:src="@{/js/apply_data_set.js}"></script> -->
 		</form>
 	</div>
 

@@ -21,3 +21,4 @@ classroom.addEventListener("change", (event) => {
     room302.classList.toggle("hidden", value !== "302");
     room303.classList.toggle("hidden", value !== "303");
 });
+
