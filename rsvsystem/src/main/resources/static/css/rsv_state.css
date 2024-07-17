@@ -169,7 +169,7 @@ table.rsv_calendar td input:hover {
 /* 予約にカーソルを合わせた際に
 		出る吹き出しのデザイン */
 tbody td{
-	position   : relative;                /* 指定した分だけ相対的に移動 */
+	position: relative;                /* 指定した分だけ相対的に移動 */
 
 }
 /* 国語 */
@@ -178,7 +178,7 @@ tbody td{
 }
 .ja .info {
 	text-align: center;
-	position   : absolute;                /* 親要素を基準 */
+	position: absolute;                /* 親要素を基準 */
 	display: none;                        /* 要素を非表示 */                      
 	padding: 10px 0 10px;			/* テキストの前後の余白 */
 	background-color: rgb(255, 102, 102);   /* 背景色（透明度） */
@@ -204,7 +204,7 @@ tbody td{
 }
 .ma .info {
 	text-align: center;
-	position   : absolute;                /* 親要素を基準 */
+	position: absolute;                /* 親要素を基準 */
 	display: none;                        /* 要素を非表示 */                      
 	padding: 10px 0 10px;			/* テキストの前後の余白 */
 	background-color: rgb(83, 83, 83);   /* 背景色（透明度） */
@@ -230,7 +230,7 @@ tbody td{
 }
 .sci .info {
 	text-align: center;
-	position   : absolute;                /* 親要素を基準 */
+	position: absolute;                /* 親要素を基準 */
 	display: none;                        /* 要素を非表示 */                      
 	padding: 10px 0 10px;			/* テキストの前後の余白 */
 	background-color: rgb(67, 249, 255);   /* 背景色（透明度） */
@@ -256,7 +256,7 @@ tbody td{
 }
 .so .info {
 	text-align: center;
-	position   : absolute;                /* 親要素を基準 */
+	position: absolute;                /* 親要素を基準 */
 	display: none;                        /* 要素を非表示 */                      
 	padding: 10px 0 10px;			/* テキストの前後の余白 */
 	background-color: rgb(255, 252, 102);   /* 背景色（透明度） */
@@ -282,7 +282,7 @@ tbody td{
 }
 .en .info {
 	text-align: center;
-	position   : absolute;                /* 親要素を基準 */
+	position: absolute;                /* 親要素を基準 */
 	display: none;                        /* 要素を非表示 */                      
 	padding: 10px 0 10px;			/* テキストの前後の余白 */
 	background-color: rgb(194, 102, 255);   /* 背景色（透明度） */
