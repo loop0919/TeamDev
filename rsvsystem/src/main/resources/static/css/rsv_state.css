@@ -159,6 +159,149 @@ table.rsv_calendar td input:hover {
 	background: none;
 }
 
+/* 予約が入った際の時間割のデザイン */
+.ja{ background-color:#ffc9c9; }
+.ma{ background-color:#73ccff; }
+.sci{ background-color:#a8ff97; }
+.so{ background-color:#ffd579; }
+.en{ background-color:#fffd6b; }
+
+/* 予約にカーソルを合わせた際に
+		出る吹き出しのデザイン */
+tbody td{
+	position   : relative;                /* 指定した分だけ相対的に移動 */
+
+}
+/* 国語 */
+.ja:hover .info {
+	display: inline;                	/* インライン要素として表示 */
+}
+.ja .info {
+	text-align: center;
+	position   : absolute;                /* 親要素を基準 */
+	display: none;                        /* 要素を非表示 */                      
+	padding: 10px 0 10px;			/* テキストの前後の余白 */
+	background-color: rgb(255, 102, 102);   /* 背景色（透明度） */
+	width: 138px;                          /* 吹き出し全体の幅 */
+	left : 0%;                           /* 表示位置 */
+	top: 85%;							/* 表示位置 */
+	font-size: 80%;                       /* 文字サイズ */
+	z-index: 1;						/* レイヤー(数値：大 → レイヤー：上位) */
+}
+.ja .info:after{
+	content: "";									/* コンテンツの挿入 */
+	position: absolute;								/* 親要素を基準 */
+	top: -30px;										/* 吹き出し口の縦位置 */
+	left: 68px;									/* 吹き出し口の位置調整 */
+	margin-left: -15px;
+	border: 15px solid transparent;					/* 吹き出し口の高さ１／２ */
+	border-bottom: 15px solid rgb(255, 102, 102);	/* 吹き出し口の幅・色 */
+}
+
+/* 数学 */
+.ma:hover .info {
+	display: inline;                	/* インライン要素として表示 */
+}
+.ma .info {
+	text-align: center;
+	position   : absolute;                /* 親要素を基準 */
+	display: none;                        /* 要素を非表示 */                      
+	padding: 10px 0 10px;			/* テキストの前後の余白 */
+	background-color: rgb(83, 83, 83);   /* 背景色（透明度） */
+	width: 138px;                          /* 吹き出し全体の幅 */
+	left : 0%;                           /* 表示位置 */
+	top: 85%;							/* 表示位置 */
+	font-size: 80%;                       /* 文字サイズ */
+	z-index: 1;						/* レイヤー(数値：大 → レイヤー：上位) */
+}
+.ma .info:after{
+	content: "";									/* コンテンツの挿入 */
+	position: absolute;								/* 親要素を基準 */
+	top: -30px;										/* 吹き出し口の縦位置 */
+	left: 68px;									/* 吹き出し口の位置調整 */
+	margin-left: -15px;
+	border: 15px solid transparent;					/* 吹き出し口の高さ１／２ */
+	border-bottom: 15px solid rgb(83, 83, 83);	/* 吹き出し口の幅・色 */
+}
+
+/* 理科 */
+.sci:hover .info {
+	display: inline;                	/* インライン要素として表示 */
+}
+.sci .info {
+	text-align: center;
+	position   : absolute;                /* 親要素を基準 */
+	display: none;                        /* 要素を非表示 */                      
+	padding: 10px 0 10px;			/* テキストの前後の余白 */
+	background-color: rgb(67, 249, 255);   /* 背景色（透明度） */
+	width: 138px;                          /* 吹き出し全体の幅 */
+	left : 0%;                           /* 表示位置 */
+	top: 85%;							/* 表示位置 */
+	font-size: 80%;                       /* 文字サイズ */
+	z-index: 1;						/* レイヤー(数値：大 → レイヤー：上位) */
+}
+.sci .info:after{
+	content: "";									/* コンテンツの挿入 */
+	position: absolute;								/* 親要素を基準 */
+	top: -30px;										/* 吹き出し口の縦位置 */
+	left: 68px;									/* 吹き出し口の位置調整 */
+	margin-left: -15px;
+	border: 15px solid transparent;					/* 吹き出し口の高さ１／２ */
+	border-bottom: 15px solid rgb(67, 249, 255);	/* 吹き出し口の幅・色 */
+}
+
+/* 社会 */
+.so:hover .info {
+	display: inline;                	/* インライン要素として表示 */
+}
+.so .info {
+	text-align: center;
+	position   : absolute;                /* 親要素を基準 */
+	display: none;                        /* 要素を非表示 */                      
+	padding: 10px 0 10px;			/* テキストの前後の余白 */
+	background-color: rgb(255, 252, 102);   /* 背景色（透明度） */
+	width: 138px;                          /* 吹き出し全体の幅 */
+	left : 0%;                           /* 表示位置 */
+	top: 85%;							/* 表示位置 */
+	font-size: 80%;                       /* 文字サイズ */
+	z-index: 1;						/* レイヤー(数値：大 → レイヤー：上位) */
+}
+.so .info:after{
+	content: "";									/* コンテンツの挿入 */
+	position: absolute;								/* 親要素を基準 */
+	top: -30px;										/* 吹き出し口の縦位置 */
+	left: 68px;									/* 吹き出し口の位置調整 */
+	margin-left: -15px;
+	border: 15px solid transparent;					/* 吹き出し口の高さ１／２ */
+	border-bottom: 15px solid rgb(255, 252, 102);	/* 吹き出し口の幅・色 */
+}
+
+/* 英語 */
+.en:hover .info {
+	display: inline;                	/* インライン要素として表示 */
+}
+.en .info {
+	text-align: center;
+	position   : absolute;                /* 親要素を基準 */
+	display: none;                        /* 要素を非表示 */                      
+	padding: 10px 0 10px;			/* テキストの前後の余白 */
+	background-color: rgb(194, 102, 255);   /* 背景色（透明度） */
+	width: 138px;                          /* 吹き出し全体の幅 */
+	left : 0%;                           /* 表示位置 */
+	top: 85%;							/* 表示位置 */
+	font-size: 90%;                       /* 文字サイズ */
+	z-index: 1;						/* レイヤー(数値：大 → レイヤー：上位) */
+}
+.en .info:after{
+	content: "";									/* コンテンツの挿入 */
+	position: absolute;								/* 親要素を基準 */
+	top: -30px;										/* 吹き出し口の縦位置 */
+	left: 68px;									/* 吹き出し口の位置調整 */
+	margin-left: -15px;
+	border: 15px solid transparent;					/* 吹き出し口の高さ１／２ */
+	border-bottom: 15px solid rgb(194, 102, 255);	/* 吹き出し口の幅・色 */
+}
+
 /* 全体 */
 .item_content{ 
 	display: flex;
